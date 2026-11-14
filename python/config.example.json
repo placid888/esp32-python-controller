@@ -1,0 +1,288 @@
+{
+  "schema_version": 3,
+  "last_used": "Profile_A",
+  "profiles": {
+    "Profile_A": {
+      "nodes": {
+        "Node_Target": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": null
+        },
+        "Skill_4": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "4"
+          }
+        },
+        "Skill_5": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "5"
+          }
+        },
+        "Skill_6": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "6"
+          }
+        },
+        "Skill_7": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "7"
+          }
+        },
+        "Skill_8": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "8"
+          }
+        },
+        "Skill_9": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "9"
+          }
+        },
+        "Skill_0": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "0"
+          }
+        }
+      },
+      "udp_endpoint": {
+        "host": "",
+        "port": 8888
+      }
+    },
+    "Profile_B": {
+      "nodes": {
+        "Node_Target": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": null
+        },
+        "Skill_4": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "4"
+          }
+        },
+        "Skill_5": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "5"
+          }
+        },
+        "Skill_6": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "6"
+          }
+        },
+        "Skill_7": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "7"
+          }
+        },
+        "Skill_8": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "8"
+          }
+        },
+        "Skill_9": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "9"
+          }
+        },
+        "Skill_0": {
+          "enabled": false,
+          "x": 0,
+          "y": 0,
+          "threshold": 200,
+          "min_delay": 25,
+          "max_delay": 60,
+          "mode": "brightness",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "tolerance": 20,
+          "command": {
+            "action": "tap",
+            "key": "0"
+          }
+        }
+      },
+      "udp_endpoint": {
+        "host": "",
+        "port": 8888
+      }
+    }
+  }
+}

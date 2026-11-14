@@ -1,0 +1,23 @@
+# Private settings
+esp32/src/wifi_secrets.h
+python/config.json
+.env
+.env.*
+!.env.example
+# Generated files
+.pio/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+*.bak
+*.bin
+*.elf
+logs/
+backups/
+diagnostics/
+artifacts/
+.vscode/
+.DS_Store
+Thumbs.db
