@@ -21,3 +21,11 @@ artifacts/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Runtime calibration, trials and local user backups
+trial-*/
+settings-backups/
+manual_test_checklist.json
+*.original
+*.restore-check
+

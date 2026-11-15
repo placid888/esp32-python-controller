@@ -141,8 +141,12 @@ class MacroDashboard(ProfileMixin):
         """
         建立介面上的按鈕、輸入框與日誌顯示區。
         """
+        from dashboard_layout import shell, summary
+        shell(self)
         self.create_profile_bar()
-        mode_row = ttk.LabelFrame(self.root, text='輸出模式（本次視窗，不儲存）', padding=8)
+        from rage_monitor_ui import add_controls
+        add_controls(self)
+        mode_row = ttk.LabelFrame(self.advanced_body, text='輸出模式（進階；本次視窗，不儲存）', padding=8)
         mode_row.pack(fill='x', padx=10, pady=5)
         self.output_mode_var = tk.StringVar(value='Dry Run' if self.controller.output_mode=='dry_run' else 'UDP 測試')
         self.output_mode_choice = ttk.Combobox(mode_row, textvariable=self.output_mode_var,
@@ -152,23 +156,8 @@ class MacroDashboard(ProfileMixin):
         ttk.Label(mode_row, text='切換前先停止；確認後更換程序，不自動連線。').pack(side='left', padx=10)
         tk.Button(mode_row, text='停止監控與 UDP', command=self.stop_all,
             bg='#a51d27', fg='white', padx=12, pady=4).pack(side='right')
-        container = ttk.Frame(self.root)
-        container.pack(fill="both", expand=True)
-        canvas = tk.Canvas(container, highlightthickness=0)
-        scrollbar = ttk.Scrollbar(container, orient="vertical", command=canvas.yview)
-        canvas.configure(yscrollcommand=scrollbar.set)
-        scrollbar.pack(side="right", fill="y")
-        canvas.pack(side="left", fill="both", expand=True)
-        self.body = ttk.Frame(canvas)
-        body_item = canvas.create_window((0, 0), window=self.body, anchor="nw")
-        self.body.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
-        canvas.bind("<Configure>", lambda e: canvas.itemconfigure(body_item, width=e.width))
-        def scroll(event):
-            canvas.yview_scroll(int(-event.delta / 120), "units")
-        self.root.bind("<MouseWheel>", scroll, add="+")
-        self.body_canvas = canvas
         # --- 區塊 1：硬體連線控制 ---
-        frame_hw = ttk.LabelFrame(self.body, text="硬體連線 (手)", padding=10)
+        frame_hw = ttk.LabelFrame(self.advanced_body, text="硬體連線與傳送紀錄", padding=10)
         frame_hw.pack(fill="x", padx=10, pady=5)
         self.last_tx_var = tk.StringVar(value='最近實際發送：尚無（送交作業系統不代表裝置執行）')
         self.last_reply_var = tk.StringVar(value='最近裝置回覆：尚無')
@@ -205,7 +194,7 @@ class MacroDashboard(ProfileMixin):
         self.btn_lcd_test.pack(side="right", padx=5)
 
         # --- 區塊 2：視覺監控控制 ---
-        frame_vision = ttk.LabelFrame(self.body, text="視覺大腦 (眼與腦)", padding=10)
+        frame_vision = ttk.LabelFrame(self.overview_body, text="監控狀態與操作", padding=10)
         frame_vision.pack(fill="x", padx=10, pady=5)
         self.output_banner=ttk.Label(frame_vision,text='DRY RUN / OUTPUT BLOCKED — UDP 禁止傳送' if self.controller.output_mode=='dry_run' else 'UDP 測試 — 可能透過 ESP32 發送 HID 鍵盤指令',foreground='#9b1c1c',font=('TkDefaultFont',11,'bold'))
         self.output_banner.pack(fill='x',pady=(0,6))
@@ -222,18 +211,18 @@ class MacroDashboard(ProfileMixin):
         self.lbl_status.pack(side="right", padx=5)
 
         self.btn_track = ttk.Button(
-            frame_vision, text="切換座標採集模式（F8）", command=self.toggle_tracking
+            self.skills_body, text="切換座標採集模式（F8）", command=self.toggle_tracking
         )
         self.btn_track.pack(fill="x", padx=5, pady=(8, 0))
-        ttk.Label(frame_vision, textvariable=self.capture_hint_var, wraplength=960).pack(fill="x", padx=5, pady=(6, 0))
+        ttk.Label(self.skills_body, textvariable=self.capture_hint_var, wraplength=960).pack(fill="x", padx=5, pady=(6, 0))
 
         # --- 區塊 3：視覺偵測參數設定 ---
-        frame_config = ttk.LabelFrame(self.body, text="戰術參數設定 (Config)", padding=10)
+        frame_config = ttk.LabelFrame(self.skills_body, text="技能與狀態色塊採色（進階參數）", padding=10)
         frame_config.pack(fill="x", padx=10, pady=5)
         self.create_node_table(frame_config)
 
         # --- 區塊 4：LCD 螢幕保護與睡眠設定 ---
-        frame_lcd = ttk.LabelFrame(self.body, text="LCD 螢幕保護與睡眠", padding=10)
+        frame_lcd = ttk.LabelFrame(self.advanced_body, text="LCD 螢幕保護與睡眠", padding=10)
         frame_lcd.pack(fill="x", padx=10, pady=5)
         saver_row = ttk.Frame(frame_lcd)
         saver_row.pack(fill="x", pady=2)
@@ -253,13 +242,14 @@ class MacroDashboard(ProfileMixin):
         ttk.Button(frame_lcd, text="LCD 文字／字級／中文設定…", command=self.open_lcd_editor).pack(anchor="e", pady=(6, 0))
 
         # --- 區塊 5：系統日誌顯示區 ---
-        frame_log = ttk.LabelFrame(self.body, text="系統日誌", padding=10)
+        frame_log = ttk.LabelFrame(self.advanced_body, text="系統日誌", padding=10)
         frame_log.pack(fill="both", expand=True, padx=10, pady=5)
         
         # 建立一個可以捲動的文字框來顯示 Print 訊息
         self.txt_log = scrolledtext.ScrolledText(frame_log, wrap=tk.WORD, height=15)
         self.txt_log.pack(fill="both", expand=True)
-        self.log_msg("系統初始化完成。請先連線硬體。")
+        summary(self)
+        self.log_msg("介面已載入。唯讀怒氣不需硬體；硬體連線與日誌在進階工具。")
 
     def log_msg(self, msg):
         """

@@ -178,7 +178,8 @@ class GuiModeAndPersistence(unittest.TestCase):
     def tearDown(self):
         self.app.is_tracking=False;self.app.calibration_hotkeys.stop()
         self.app.hotkey_capture.stop();self.app.restore_output();self.app.vision.close()
-        for ident in self.root.tk.call('after','info'):self.root.after_cancel(ident)
+        # Cancel pending Tcl timers without deleting child-owned Python commands twice.
+        for ident in self.root.tk.call('after','info'):self.root.tk.call('after','cancel',ident)
         self.root.destroy();self.guard.stop();self.temp.cleanup()
 
     def test_mode_label_and_context(self):

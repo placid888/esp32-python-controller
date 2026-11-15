@@ -105,6 +105,16 @@ def validate_candidates(candidates):
     return candidates[0]
 
 
+def validate_foreground_candidates(candidates, foreground_hwnd):
+    """Opt-in read-only monitor selection: never choose an arbitrary WoW window."""
+    if not candidates:
+        raise WindowError('not_found', '找不到可確認的魔獸視窗，請先開啟遊戲。')
+    matches=[candidate for candidate in candidates if int(candidate[0])==int(foreground_hwnd or 0)]
+    if len(matches)!=1:
+        raise WindowError('wow_not_foreground', '請點回要監控的魔獸畫面；只讀取前景魔獸，不會任選視窗或擷取桌面。')
+    return matches[0]
+
+
 def _geometry(u, hwnd, pid, title, image):
     if not u.IsWindow(hwnd) or not u.IsWindowVisible(hwnd):
         raise WindowError('window_unavailable', 'Window disappeared or is hidden')
@@ -122,7 +132,7 @@ def _geometry(u, hwnd, pid, title, image):
                      (outer.left, outer.top, outer.right, outer.bottom))
 
 
-def find_wow_client(expected_image=None):
+def find_wow_client(expected_image=None, *, foreground_only=False):
     u, k = _libraries()
     found, errors = [], []
     callback_type = c.WINFUNCTYPE(w.BOOL, w.HWND, w.LPARAM)
@@ -158,7 +168,13 @@ def find_wow_client(expected_image=None):
         raise WindowError('enumeration_failed', str(c.get_last_error()))
     if errors:
         raise WindowError('identity_unverified', '; '.join(errors))
-    return _geometry(u, *validate_candidates(found))
+    if foreground_only:
+        u.GetForegroundWindow.argtypes=[]
+        u.GetForegroundWindow.restype=w.HWND
+        candidate=validate_foreground_candidates(found,u.GetForegroundWindow())
+    else:
+        candidate=validate_candidates(found)
+    return _geometry(u, *candidate)
 
 
 def wow_client_to_screen(client, x, y):

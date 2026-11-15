@@ -122,7 +122,8 @@ class DryGuiTests(unittest.TestCase):
         self.app=MacroDashboard(self.root,config_path=self.path,output_mode='dry_run')
     def tearDown(self):
         self.app.stop_loop();self.app.calibration_hotkeys.stop();self.app.restore_output();self.app.vision.close()
-        for ident in self.root.tk.call('after','info'):self.root.after_cancel(ident)
+        # Cancel pending Tcl timers without deleting child-owned Python commands twice.
+        for ident in self.root.tk.call('after','info'):self.root.tk.call('after','cancel',ident)
         self.root.destroy();self.keys.stop();self.tmp.cleanup()
     def test_dry_gui_banner_connection_and_formal_config(self):
         self.assertIn('DRY RUN / OUTPUT BLOCKED',self.app.output_banner.cget('text'))

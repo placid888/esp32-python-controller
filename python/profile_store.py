@@ -36,12 +36,12 @@ def validate_node(n):
     ratio=n.get('match_ratio',.30)
     if type(ratio) not in (int,float) or not 0<ratio<=1:raise ValueError('match_ratio must be > 0 and <= 1')
     c=n['command']
-    if c is not None and (not isinstance(c,dict) or c.get('action')!='tap' or not isinstance(c.get('key'),str) or c.get('key') not in '4567890' or len(c.get('key',''))!=1):
+    if c is not None and (not isinstance(c,dict) or c.get('action')!='tap' or not isinstance(c.get('key'),str) or c.get('key') not in '1234567890' or len(c.get('key',''))!=1):
         raise ValueError('技能 command 僅允許固定數字 tap')
     return n
 
 def validate_profile(p):
-    if not isinstance(p,dict) or set(p.get('nodes',{}))!=set(NODE_NAMES):raise ValueError('需有完整十個節點')
+    if not isinstance(p,dict) or set(p.get('nodes',{}))!=set(NODE_NAMES):raise ValueError('需有完整十三個節點')
     mark_settings(p)
     if p.get('combat_mode','auto') not in ('auto','manual_first_hit'):raise ValueError('Unknown combat_mode')
     for name,n in p['nodes'].items():

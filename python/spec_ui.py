@@ -5,7 +5,7 @@ import profile_store as store
 from class_registry import CLASSES,definition,spec_definition
 
 def create_bar(app):
-    box=ttk.LabelFrame(app.root,text='角色 / 專精',padding=8);box.pack(fill='x',padx=10,pady=(0,4))
+    box=ttk.LabelFrame(getattr(app,'character_parent',app.root),text='角色 / 專精',padding=8);box.pack(fill='x',padx=10,pady=(0,4))
     line=ttk.Frame(box);line.pack(fill='x')
     ttk.Label(line,text='職業：').pack(side='left')
     app.class_var=tk.StringVar();app.spec_var=tk.StringVar();app.active_character_var=tk.StringVar()

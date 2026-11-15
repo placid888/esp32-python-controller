@@ -11,7 +11,7 @@ def legacy():
     nodes=store.default_nodes();nodes['Skill_4'].update(enabled=True,x=100,y=200,threshold=120,r=23,tolerance=17,min_delay=40,max_delay=80)
     nodes['Skill_5']['threshold']=121
     return {'nodes':nodes,'combat_mode':'manual_first_hit','hunter_mark_mode':'pre_combat','hunter_mark_key':'3','hunter_mark_retry_ms':500,
-        'udp_endpoint':{'host':'192.168.1.2','port':8888},'lcd_power':{'sleep_enabled':True},'custom':{'keep':1}}
+        'udp_endpoint':{'host':'192.0.2.1','port':8888},'lcd_power':{'sleep_enabled':True},'custom':{'keep':1}}
 class Data(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.path=Path(self.tmp.name)/'config.json';self.old=legacy();self.path.write_text(json.dumps(self.old))
@@ -41,7 +41,7 @@ class Data(unittest.TestCase):
         p=self.active();specs=p['classes']['hunter']['specs'];specs['survival']['nodes']['Skill_4']['threshold']=1
         self.assertEqual(specs['marksmanship']['nodes']['Skill_4']['threshold'],120);self.assertEqual(specs['beast_mastery']['nodes']['Skill_4']['threshold'],200)
     def test08_global_shared_and_canonical_disk(self):
-        store.update_active(self.path,{'udp_endpoint':{'host':'192.168.1.3','port':9999}})
+        store.update_active(self.path,{'udp_endpoint':{'host':'192.0.2.1','port':9999}})
         for spec in ('beast_mastery','marksmanship','survival'):
             self.select(spec);self.assertEqual(self.active()['udp_endpoint']['port'],9999)
         raw=json.loads(self.path.read_text());p=raw['profiles']['Default'];self.assertNotIn('nodes',p);self.assertNotIn('udp_endpoint',p)

@@ -56,7 +56,7 @@ class BenchTests(unittest.TestCase):
         _,r=self.run_case('priority',lambda t:states(Skill_4=True,Skill_5=True),enabled=('Skill_4','Skill_5'))
         self.assertGreater(r['per_skill_count']['Skill_4'],0);self.assertEqual(r['per_skill_count']['Skill_5'],0)
     def test_all_alternating(self):
-        _,r=self.run_case('alternating',lambda t:states(**{n:i==int(t/.2)%7 for i,n in enumerate(SKILL_PRIORITY)}),duration=7,enabled=SKILL_PRIORITY)
+        _,r=self.run_case('alternating',lambda t:states(**{n:i==int(t/.2)%len(SKILL_PRIORITY) for i,n in enumerate(SKILL_PRIORITY)}),duration=7,enabled=SKILL_PRIORITY)
         self.assertTrue(all(r['per_skill_count'][n]>0 for n in SKILL_PRIORITY))
     def test_target_unknown(self):self.check_unknown('Node_Target')
     def test_mark_unknown(self):self.check_unknown('Node_Mark')

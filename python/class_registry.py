@@ -25,6 +25,7 @@ def register(definition):
     if not ids or len(ids)!=len(set(ids)) or definition.default_spec not in ids:raise ValueError('Invalid spec registry')
     CLASSES[definition.id]=definition
 register(ClassDefinition('hunter','獵人',(SpecDefinition('beast_mastery','獸王'),SpecDefinition('marksmanship','射擊'),SpecDefinition('survival','生存')),'marksmanship'))
+register(ClassDefinition('warrior','戰士',(SpecDefinition('arms','武器'),SpecDefinition('fury','狂怒'),SpecDefinition('protection','防護')),'arms'))
 MIGRATION_CLASS='hunter'
 MIGRATION_SPEC='marksmanship'
 def definition(class_id):return CLASSES[class_id]

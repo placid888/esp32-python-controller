@@ -1,287 +1,2647 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "last_used": "Profile_A",
   "profiles": {
     "Profile_A": {
-      "nodes": {
-        "Node_Target": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": null
-        },
-        "Skill_4": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "4"
-          }
-        },
-        "Skill_5": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "5"
-          }
-        },
-        "Skill_6": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "6"
-          }
-        },
-        "Skill_7": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "7"
-          }
-        },
-        "Skill_8": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "8"
-          }
-        },
-        "Skill_9": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "9"
-          }
-        },
-        "Skill_0": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "0"
-          }
+      "profile_version": 2,
+      "selected_class": "hunter",
+      "selected_spec": "marksmanship",
+      "global": {
+        "udp_endpoint": {
+          "host": "",
+          "port": 8888
         }
       },
-      "udp_endpoint": {
-        "host": "",
-        "port": 8888
+      "classes": {
+        "hunter": {
+          "shared": {
+            "nodes": {
+              "Node_Target": {
+                "enabled": false,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "brightness",
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Combat": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 255,
+                "g": 0,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Mark": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 0,
+                "g": 255,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              }
+            },
+            "combat_mode": "auto",
+            "hunter_mark_mode": "off",
+            "hunter_mark_key": "3",
+            "hunter_mark_retry_ms": 500
+          },
+          "specs": {
+            "beast_mastery": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "marksmanship": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "survival": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            }
+          }
+        },
+        "warrior": {
+          "shared": {
+            "nodes": {
+              "Node_Target": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "brightness",
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Combat": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 255,
+                "g": 0,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Mark": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 0,
+                "g": 255,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              }
+            },
+            "combat_mode": "auto",
+            "hunter_mark_mode": "off",
+            "hunter_mark_key": "3",
+            "hunter_mark_retry_ms": 500
+          },
+          "specs": {
+            "arms": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "fury": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "protection": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            }
+          }
+        }
       }
     },
     "Profile_B": {
-      "nodes": {
-        "Node_Target": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": null
-        },
-        "Skill_4": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "4"
-          }
-        },
-        "Skill_5": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "5"
-          }
-        },
-        "Skill_6": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "6"
-          }
-        },
-        "Skill_7": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "7"
-          }
-        },
-        "Skill_8": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "8"
-          }
-        },
-        "Skill_9": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "9"
-          }
-        },
-        "Skill_0": {
-          "enabled": false,
-          "x": 0,
-          "y": 0,
-          "threshold": 200,
-          "min_delay": 25,
-          "max_delay": 60,
-          "mode": "brightness",
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "tolerance": 20,
-          "command": {
-            "action": "tap",
-            "key": "0"
-          }
+      "profile_version": 2,
+      "selected_class": "hunter",
+      "selected_spec": "marksmanship",
+      "global": {
+        "udp_endpoint": {
+          "host": "",
+          "port": 8888
         }
       },
-      "udp_endpoint": {
-        "host": "",
-        "port": 8888
+      "classes": {
+        "hunter": {
+          "shared": {
+            "nodes": {
+              "Node_Target": {
+                "enabled": false,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "brightness",
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Combat": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 255,
+                "g": 0,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Mark": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 0,
+                "g": 255,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              }
+            },
+            "combat_mode": "auto",
+            "hunter_mark_mode": "off",
+            "hunter_mark_key": "3",
+            "hunter_mark_retry_ms": 500
+          },
+          "specs": {
+            "beast_mastery": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "marksmanship": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "survival": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            }
+          }
+        },
+        "warrior": {
+          "shared": {
+            "nodes": {
+              "Node_Target": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "brightness",
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Combat": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 255,
+                "g": 0,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              },
+              "Node_Mark": {
+                "enabled": true,
+                "x": 0,
+                "y": 0,
+                "threshold": 200,
+                "min_delay": 25,
+                "max_delay": 60,
+                "mode": "color",
+                "r": 0,
+                "g": 255,
+                "b": 0,
+                "tolerance": 20,
+                "sample_mode": "single_pixel",
+                "match_ratio": 0.3,
+                "command": null
+              }
+            },
+            "combat_mode": "auto",
+            "hunter_mark_mode": "off",
+            "hunter_mark_key": "3",
+            "hunter_mark_retry_ms": 500
+          },
+          "specs": {
+            "arms": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "fury": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            },
+            "protection": {
+              "nodes": {
+                "Skill_1": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "1"
+                  }
+                },
+                "Skill_2": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "2"
+                  }
+                },
+                "Skill_3": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "3"
+                  }
+                },
+                "Skill_4": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "4"
+                  }
+                },
+                "Skill_5": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "5"
+                  }
+                },
+                "Skill_6": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "6"
+                  }
+                },
+                "Skill_7": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "7"
+                  }
+                },
+                "Skill_8": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "8"
+                  }
+                },
+                "Skill_9": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "9"
+                  }
+                },
+                "Skill_0": {
+                  "enabled": false,
+                  "x": 0,
+                  "y": 0,
+                  "threshold": 200,
+                  "min_delay": 25,
+                  "max_delay": 60,
+                  "mode": "brightness",
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "tolerance": 20,
+                  "sample_mode": "single_pixel",
+                  "match_ratio": 0.3,
+                  "command": {
+                    "action": "tap",
+                    "key": "0"
+                  }
+                }
+              },
+              "state_inputs": {},
+              "decision_rules": [],
+              "actions": [],
+              "metadata": {}
+            }
+          }
+        }
       }
     }
   }

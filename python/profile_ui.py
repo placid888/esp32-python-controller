@@ -12,19 +12,19 @@ MARK_LABELS={'off':'關閉','pre_combat':'A－開戰前印記','post_combat':'B�
 
 class ProfileMixin:
     def create_profile_bar(self):
-        bar=ttk.LabelFrame(self.root,text='情境設定檔 (Profile)',padding=10);bar.pack(fill='x',padx=10,pady=(8,4))
+        bar=ttk.LabelFrame(self.profile_parent,text='情境設定檔 (Profile)',padding=10);bar.pack(fill='x',padx=10,pady=(8,4))
         self.profile_var=tk.StringVar(value=self.active_profile_name)
         self.profile_combo=ttk.Combobox(bar,textvariable=self.profile_var,state='readonly',values=list(self.profile_data['profiles']),width=24)
         self.profile_combo.pack(side='left',fill='x',expand=True,padx=(0,10))
         self.profile_combo.bind('<<ComboboxSelected>>',self.switch_profile)
         for text,cmd in [('新增設定檔',self.new_profile),('重新命名',self.rename_profile),('刪除設定檔',self.delete_profile)]:ttk.Button(bar,text=text,command=cmd).pack(side='left',padx=4)
         spec_ui.create_bar(self)
-        mode_row=ttk.Frame(self.root);mode_row.pack(fill='x',padx=20,pady=(0,4))
+        mode_row=ttk.Frame(self.advanced_parent);mode_row.pack(fill='x',padx=20,pady=(0,4))
         ttk.Label(mode_row,text='開戰方式').pack(side='left',padx=(0,8))
         self.combat_mode_var=tk.StringVar(value='自動開戰')
         self.combat_mode_combo=ttk.Combobox(mode_row,textvariable=self.combat_mode_var,values=('自動開戰','手動第一下'),state='readonly',width=18)
         self.combat_mode_combo.pack(side='left')
-        mark_row=ttk.Frame(self.root);mark_row.pack(fill='x',padx=20,pady=(0,6))
+        mark_row=ttk.Frame(self.advanced_parent);mark_row.pack(fill='x',padx=20,pady=(0,6))
         ttk.Label(mark_row,text='獵人印記模式').pack(side='left',padx=(0,8))
         self.hunter_mark_mode_var=tk.StringVar(value=MARK_LABELS['off'])
         self.hunter_mark_combo=ttk.Combobox(mark_row,textvariable=self.hunter_mark_mode_var,values=tuple(MARK_LABELS.values()),state='readonly',width=20)
@@ -61,7 +61,7 @@ class ProfileMixin:
             label=tk.StringVar(value='Desktop');self.coordinate_labels[name]=label
             ttk.Label(frame,textvariable=label).grid(row=row,column=10,sticky='w',padx=4)
         for col in range(2,7):frame.columnconfigure(col,weight=1,minsize=95 if col>=4 else 60)
-        ttk.Label(frame,text='brightness：RGB 平均 > Threshold；red：R > Threshold；color：依進階 RGB／Tolerance。Target / Combat / Mark 僅作 gate；固定技能鍵 4 > 5 > 6 > 7 > 8 > 9 > 0。',wraplength=920,justify='left').grid(row=len(store.NODE_NAMES)+1,column=0,columnspan=10,sticky='w',padx=4,pady=(8,4))
+        ttk.Label(frame,text='brightness：RGB 平均 > Threshold；red：R > Threshold；color：依進階 RGB／Tolerance。Target / Combat / Mark 僅作 gate；固定技能鍵 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 0。',wraplength=920,justify='left').grid(row=len(store.NODE_NAMES)+1,column=0,columnspan=10,sticky='w',padx=4,pady=(8,4))
         buttons=ttk.Frame(frame);buttons.grid(row=len(store.NODE_NAMES)+2,column=0,columnspan=10,sticky='e',pady=(6,0))
         ttk.Button(buttons,text='重新載入目前 Profile',command=self.load_config_into_entries).pack(side='left',padx=4)
         ttk.Button(buttons,text='儲存設定（目前 Profile）',command=self.save_config_from_entries).pack(side='left',padx=4)
@@ -87,7 +87,7 @@ class ProfileMixin:
                 for key,entry in fields.items():entry.delete(0,tk.END);entry.insert(0,str(nodes[name][key]))
                 for key,var in self.node_vars[name].items():var.set(nodes[name][key])
             self.runtime_nodes=copy.deepcopy(nodes);self.brain.reset()
-            if show_log:self.log_msg('已載入目前 Profile 的Target 與七個技能。')
+            if show_log:self.log_msg('已載入目前 Profile 的狀態節點與十個技能。')
             return True
         except (OSError,ValueError,KeyError,TypeError) as exc:
             self.log_msg('載入失敗：'+str(exc));return False

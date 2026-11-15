@@ -4,6 +4,16 @@ ESP32-S3 韌體與 Windows Python 控制台：以區域網路 UDP JSON 傳送命
 
 > 此儲存庫是現有專案的整理副本。未包含 Wi-Fi 密碼、個人 config、備份、日誌或編譯產物；原本機專案不受影響。
 
+## 2026-11-15 進度快照
+
+詳見 [完整進度報告](docs/PROGRESS_2026-11-15.md) 與 [本次驗證](VALIDATION.md)。目前為受監督的試驗版，**不是穩定完成的無人值守自動戰鬥**。
+
+- 最新獵人配置：1擊殺命令、2秘法射擊、3穩固射擊；集中值只作診斷，不作此試驗的出手門檻。
+- `python/TEST_HUNTER_123.cmd` 為有實際輸出能力的獨立限時試驗；GUI仍預設Dry Run。使用前請校準並確認沒有另一套輸出。
+- 先前木人版有7次tap ACK及畫面施法證據；最新123啟動等待修正尚待新一輪實機驗證。
+- 98項本次選定測試通過；冷卻phase3/4/5是無網路模擬，不代表遊戲冷卻整合已完成。未重跑全部測試或重新編譯ESP32。
+- 個人config、Wi-Fi秘密、原始截圖／日誌未提交。請複製 `python/config.example.json` 並重新設定；該範例已升為schema4，預設不啟用技能。
+
 ## 目錄
 
 ```text
@@ -74,7 +84,7 @@ Copy-Item config.example.json config.json
 CLI 會直接啟動視覺／決策迴圈，不建議當作第一次連線測試：
 
 ```powershell
-python main.py --host 192.168.1.50 --port 8888
+python main.py --host 192.0.2.1 --port 8888
 ```
 
 ## UDP 協定
